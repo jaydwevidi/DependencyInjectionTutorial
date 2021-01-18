@@ -28,5 +28,9 @@ class MainActivity : AppCompatActivity() {
             val name = editTextTextPersonName.text.toString()
             myAdapter.add(Person(45, name))
         }
+
+        clearButton.setOnClickListener {
+            myAdapter.clear()
+        }
     }
 }
