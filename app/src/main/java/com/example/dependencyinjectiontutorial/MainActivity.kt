@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         sampleDataSet.add(Person(43,"Clark Kent"))
         sampleDataSet.add(Person(43,"Diana Prince"))
         sampleDataSet.add(Person(43,"Bruce Wayne"))
+        sampleDataSet.add(Person(43,"Bruce Wayne"))
 
         val myAdapter = MyRecyclerAdapter(sampleDataSet)
         recyclerView.adapter = myAdapter
