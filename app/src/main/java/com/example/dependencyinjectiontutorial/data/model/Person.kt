@@ -1,4 +1,4 @@
-package com.example.dependencyinjectiontutorial
+package com.example.dependencyinjectiontutorial.data.model
 
 data class Person (
     var age: Int,

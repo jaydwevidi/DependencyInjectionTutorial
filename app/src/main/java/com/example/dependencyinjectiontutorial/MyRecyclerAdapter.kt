@@ -3,26 +3,16 @@ package com.example.dependencyinjectiontutorial
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.dependencyinjectiontutorial.data.model.Person
 import kotlinx.android.synthetic.main.card.view.*
 
-class MyRecyclerAdapter(val dataList: MutableList<Person> = arrayListOf()) : RecyclerView.Adapter<MyRecyclerAdapter.MyViewHolder>() {
+class MyRecyclerAdapter(var dataList: List<Person> = arrayListOf()) : RecyclerView.Adapter<MyRecyclerAdapter.MyViewHolder>() {
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         var name = itemView.textView
         var ID = itemView.textView2
         var photo = itemView.imageView
-    }
-
-    fun add( person: Person){
-        dataList.add(person)
-        notifyDataSetChanged()
-    }
-
-    fun clear(){
-        dataList.clear()
-        notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
